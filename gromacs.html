@@ -1,0 +1,105 @@
+
+<!DOCTYPE HTML>
+<!-- Website template by freewebsitetemplates.com -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Zerotype Website Template</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+	<div id="header">
+		<div>
+			<div class="logo">
+				<a href="index.html">WASEEMBIOINFO</a>
+			</div>
+			<ul id="navigation">
+				<li class="active">
+					<a href="index.html">Home</a>
+				</li>
+				<li>
+					<a href="features.html">Features</a>
+				</li>
+				<li>
+					<a href="news.html">News</a>
+				</li>
+				<li>
+					<a href="about.html">About</a>
+				</li>
+				<li>
+					<a href="contact.html">Contact</a>
+				</li>
+			</ul>
+	</div>
+	</div>
+        <div id="contents">
+	<div class="sidenav">
+<a href="R.html">R</a>
+<a href="tr.html">tr</a>
+<a href="vi.html">vi</a>
+<a href="rm.html">rm</a>
+<a href="vmd.html">vmd</a>
+<a href="for.html">for</a>
+<a href="sed.html">sed</a>
+<a href="cut.html">cut</a>
+<a href="awk.html">awk</a>
+<a href="date.html">date</a>
+<a href="math.html">math</a>
+<a href="echo.html">echo</a>
+<a href="sort.html">sort</a>
+<a href="perl.html">perl</a>
+<a href="grep.html">grep</a>
+<a href="uniq.html">uniq</a>
+<a href="while.html">while</a>
+<a href="pymol.html">pymol</a>
+<a href="system.html">system</a>
+<a href="maestro.html">maestro</a>
+<a href="convert.html">convert</a>
+<a href="xmgrace.html">xmgrace</a>
+<a href="basename.html">basename</a>
+<a href="jnulogin.html">jnulogin</a>
+<a href="gromacs.html">gromacs</a>
+<a href="molconverter.html">molconverter</a>
+<a href="miscellaneous.html">miscellaneous</a>
+<a href="check_system_memeory.html">check_system_memeory</a>
+	</div>
+	<h1> gromacs </h1>
+	<table id="customers">
+<tr><td> <span style="font-style:italic;color:green;">Freez atoms during simulation </span> </tr></td>
+<tr><td> Just create group in index.ndx file and add 'freezegrps = group_name' and 'freezedim = Y Y Y' in mdp file --&gt; http://binf.gmu.edu/vaisman/gromacs/online/mdp_opt.html </tr></td>
+<tr><td> <span style="font-style:italic;color:green;">To extract only one fram from tranjectory </span> </tr></td>
+<tr><td> gmx trjconv -f complex_md.xtc -s md_0_1.tpr -n index.ndx -b 50000 -e 50000 ---&gt; 50000 is time in ps </tr></td>
+<tr><td> <span style="font-style:italic;color:green;">gmx tools detail </span> </tr></td>
+<tr><td> http://manpages.ubuntu.com/manpages/xenial/man1/gmx.1.html </tr></td>
+<tr><td> <span style="font-style:italic;color:green;">Extract the specific frame </span> </tr></td>
+<tr><td> gmx trjcov -s file.tpr -f file.xtc -b 1000 -e 1000 ---&gt; (1000 is the time in ps) </tr></td>
+<tr><td> <span style="font-style:italic;color:green;">Select backbone of group </span> </tr></td>
+<tr><td> &gt; 19 | 'backb' ---&gt; where 19 is group and replace single comma with double comma </tr></td>
+<tr><td> <span style="font-style:italic;color:green;">Calculate RMSF of protein </span> </tr></td>
+<tr><td> 'gmx rmsf -s protein.tpr -f protein_fit.xtc -o rmsf.xvg -oq rmsf.pdb -res'  choose 1 for protein. </tr></td>
+<tr><td> <span style="font-style:italic;color:green;">Extend MD simulation </span> </tr></td>
+<tr><td> Add no of Steps extend in new mdp file; then run command 'grompp -f new.mdp -c old.tpr -o new.tpr -t old.cpt'; then 'mdrun -s new.tpr' </tr></td>
+<tr><td> <span style="font-style:italic;color:green;">combine-xtc-files </span> </tr></td>
+<tr><td> gmx trjcat -f md_0_1.xtc md_0_1_rerun.xtc md_0_1_rerun_1.xtc -n index.ndx -o combined.xtc </tr></td>
+<tr><td> <span style="font-style:italic;color:green;">Remove-pbc-box </span> </tr></td>
+<tr><td> gmx trjconv -s md_0_1.tpr -f md_0_1.xtc -o complex_md.xtc -pbc nojump&lt;&lt;END0 </tr></td>
+<tr><td> 0 </tr></td>
+<tr><td> END0 </tr></td>
+<tr><td> gmx trjconv -f complex_md.xtc -s  md_0_1.tpr -ur compact -pbc mol -o complex_md_noPBC.xtc&lt;&lt;END1 </tr></td>
+<tr><td> 0 </tr></td>
+<tr><td> END1 </tr></td>
+<tr><td> <span style="font-style:italic;color:green;">RMSD </span> </tr></td>
+<tr><td> gmx rms -s md_0_1.tpr -f md_0_1.xtc -o rmsd11.xvg -tu ns </tr></td>
+<tr><td> <span style="font-style:italic;color:green;">Hygrogen_bond </span> </tr></td>
+<tr><td> gmx hbond -f md_0_1.xtc -s md_0_1.tpr -num hydrogen-bonds-intra-peptide.xvg -tu ns </tr></td>
+<tr><td> <span style="font-style:italic;color:green;">Radius-of-gyration </span> </tr></td>
+<tr><td> gmx gyrate -s md_0_1.tpr -f md_0_1.xtc -o gyrate.xvg </tr></td>
+<tr><td> <span style="font-style:italic;color:green;">Define GPU and threads in gmx Command </span> </tr></td>
+<tr><td> gmx -nt 6 -gpu_id 0 </tr></td>
+<tr><td> -gpu_id0 --&gt; for first GPU node </tr></td>
+<tr><td> 1 --&gt; for second GPU node </tr></td>
+<tr><td> 01 --&gt; for first and second GPU node </tr></td>
+
+	</table>
+</body>
+</html>

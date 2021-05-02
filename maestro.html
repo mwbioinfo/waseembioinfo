@@ -1,0 +1,85 @@
+
+<!DOCTYPE HTML>
+<!-- Website template by freewebsitetemplates.com -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Zerotype Website Template</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+	<div id="header">
+		<div>
+			<div class="logo">
+				<a href="index.html">WASEEMBIOINFO</a>
+			</div>
+			<ul id="navigation">
+				<li class="active">
+					<a href="index.html">Home</a>
+				</li>
+				<li>
+					<a href="features.html">Features</a>
+				</li>
+				<li>
+					<a href="news.html">News</a>
+				</li>
+				<li>
+					<a href="about.html">About</a>
+				</li>
+				<li>
+					<a href="contact.html">Contact</a>
+				</li>
+			</ul>
+	</div>
+	</div>
+        <div id="contents">
+	<div class="sidenav">
+<a href="R.html">R</a>
+<a href="tr.html">tr</a>
+<a href="vi.html">vi</a>
+<a href="rm.html">rm</a>
+<a href="vmd.html">vmd</a>
+<a href="for.html">for</a>
+<a href="sed.html">sed</a>
+<a href="cut.html">cut</a>
+<a href="awk.html">awk</a>
+<a href="date.html">date</a>
+<a href="math.html">math</a>
+<a href="echo.html">echo</a>
+<a href="sort.html">sort</a>
+<a href="perl.html">perl</a>
+<a href="grep.html">grep</a>
+<a href="uniq.html">uniq</a>
+<a href="while.html">while</a>
+<a href="pymol.html">pymol</a>
+<a href="system.html">system</a>
+<a href="maestro.html">maestro</a>
+<a href="convert.html">convert</a>
+<a href="xmgrace.html">xmgrace</a>
+<a href="basename.html">basename</a>
+<a href="jnulogin.html">jnulogin</a>
+<a href="gromacs.html">gromacs</a>
+<a href="molconverter.html">molconverter</a>
+<a href="miscellaneous.html">miscellaneous</a>
+<a href="check_system_memeory.html">check_system_memeory</a>
+	</div>
+	<h1> maestro </h1>
+	<table id="customers">
+<tr><td> <span style="font-style:italic;color:green;">Sort Docked maegz files </span> </tr></td>
+<tr><td> $SCHRODINGER/utilities/glide_sort -o jobname_interrupted_pv.maegz jobname_raw.maegz </tr></td>
+<tr><td> <span style="font-style:italic;color:green;">Merge docked maegz output files </span> </tr></td>
+<tr><td> $SCHRODINGER/utilities/glide_merge -o out_pv.maegz -r out.rept file1_pv.maegz file2_pv.maegz </tr></td>
+<tr><td> <span style="font-style:italic;color:green;">Export structure in pdb files </span> </tr></td>
+<tr><td> $SCHRODINGER/utilities/pdbconvert -imae Antifungal.maegz -opdb output </tr></td>
+<tr><td> <span style="font-style:italic;color:green;">Export specific scores in cvs file </span> </tr></td>
+<tr><td> $SCHRODINGER/utilities/proplister -a -c Antifungal_HTVS_pv.maegz -p r_i_docking_score &gt; scores.cvs </tr></td>
+<tr><td> <span style="font-style:italic;color:green;">Export scores in cvs file </span> </tr></td>
+<tr><td> $SCHRODINGER/utilities/proplister -a -c Antifungal_HTVS_pv.maegz &gt; scores.cvs </tr></td>
+<tr><td> <span style="font-style:italic;color:green;">ligprep command </span> </tr></td>
+<tr><td> $SCHRODINGER/ligprep -inp ligprep.inp -HOST localhost:6 -NJOBS 6 -TMPLAUNCHDIR -ATTACHED </tr></td>
+<tr><td> <span style="font-style:italic;color:green;">Run glide command </span> </tr></td>
+<tr><td> $SCHRODINGER/glide file.in -OVERWRITE -NJOBS 5 -HOST localhost:10 -TMPLAUNCHDIR -ATTACHED </tr></td>
+
+	</table>
+</body>
+</html>

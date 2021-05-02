@@ -1,0 +1,119 @@
+
+<!DOCTYPE HTML>
+<!-- Website template by freewebsitetemplates.com -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Zerotype Website Template</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+	<div id="header">
+		<div>
+			<div class="logo">
+				<a href="index.html">WASEEMBIOINFO</a>
+			</div>
+			<ul id="navigation">
+				<li class="active">
+					<a href="index.html">Home</a>
+				</li>
+				<li>
+					<a href="features.html">Features</a>
+				</li>
+				<li>
+					<a href="news.html">News</a>
+				</li>
+				<li>
+					<a href="about.html">About</a>
+				</li>
+				<li>
+					<a href="contact.html">Contact</a>
+				</li>
+			</ul>
+	</div>
+	</div>
+        <div id="contents">
+	<div class="sidenav">
+<a href="R.html">R</a>
+<a href="tr.html">tr</a>
+<a href="vi.html">vi</a>
+<a href="rm.html">rm</a>
+<a href="vmd.html">vmd</a>
+<a href="for.html">for</a>
+<a href="sed.html">sed</a>
+<a href="cut.html">cut</a>
+<a href="awk.html">awk</a>
+<a href="date.html">date</a>
+<a href="math.html">math</a>
+<a href="echo.html">echo</a>
+<a href="sort.html">sort</a>
+<a href="perl.html">perl</a>
+<a href="grep.html">grep</a>
+<a href="uniq.html">uniq</a>
+<a href="while.html">while</a>
+<a href="pymol.html">pymol</a>
+<a href="system.html">system</a>
+<a href="maestro.html">maestro</a>
+<a href="convert.html">convert</a>
+<a href="xmgrace.html">xmgrace</a>
+<a href="basename.html">basename</a>
+<a href="jnulogin.html">jnulogin</a>
+<a href="gromacs.html">gromacs</a>
+<a href="molconverter.html">molconverter</a>
+<a href="miscellaneous.html">miscellaneous</a>
+<a href="check_system_memeory.html">check_system_memeory</a>
+	</div>
+	<h1> pymol </h1>
+	<table id="customers">
+<tr><td> <span style="font-style:italic;color:green;">Set stick radius and sphere scale </span> </tr></td>
+<tr><td> set stick_radius, 0.20, (all) and set sphere_scale, 0.24, (all) </tr></td>
+<tr><td> <span style="font-style:italic;color:green;">make Label like 15-LYS-A </span> </tr></td>
+<tr><td> label n. CA and selection_name,'%s-%s-(%s)' % (resn,resi,chain) </tr></td>
+<tr><td> <span style="font-style:italic;color:green;">Move label </span> </tr></td>
+<tr><td> type 'edit_mode' Ctrl+left click </tr></td>
+<tr><td> <span style="font-style:italic;color:green;">preset commands </span> </tr></td>
+<tr><td> https://pymolwiki.org/index.php/Preset </tr></td>
+<tr><td> <span style="font-style:italic;color:green;">Renumber protein sequence </span> </tr></td>
+<tr><td> alter (all),resi=str(int(resi)+100) ---&gt; you can change all with chain A or chain B </tr></td>
+<tr><td> <span style="font-style:italic;color:green;">Export high quality image </span> </tr></td>
+<tr><td> png /tmp/ex.png, width=1200, height=1200, dpi=300, ray=1 </tr></td>
+<tr><td> <span style="font-style:italic;color:green;">Set surface transparancy </span> </tr></td>
+<tr><td> set transparency, 0.5 </tr></td>
+<tr><td> <span style="font-style:italic;color:green;">colour the protein based on b-factor </span> </tr></td>
+<tr><td> Action-&gt;Presets-&gt;B-Factor Putty </tr></td>
+<tr><td> <span style="font-style:italic;color:green;">Select residue within 5 Angstrom </span> </tr></td>
+<tr><td> select name around 5 </tr></td>
+<tr><td> <span style="font-style:italic;color:green;">Regarding Seq commands  </span> </tr></td>
+<tr><td> https://pymolwiki.org/index.php/Seq_view_location </tr></td>
+<tr><td> <span style="font-style:italic;color:green;">show Ser_view </span> </tr></td>
+<tr><td> set seq_view, 1 </tr></td>
+<tr><td> <span style="font-style:italic;color:green;">internal GUI only </span> </tr></td>
+<tr><td> pymol file.pdb -a3 </tr></td>
+<tr><td> <span style="font-style:italic;color:green;">full screen presentation </span> </tr></td>
+<tr><td> pymol file.pdb -a6 </tr></td>
+<tr><td> <span style="font-style:italic;color:green;">change background color </span> </tr></td>
+<tr><td> bg_color white </tr></td>
+<tr><td> <span style="font-style:italic;color:green;">Set surface color </span> </tr></td>
+<tr><td> set surface_color, red </tr></td>
+<tr><td> <span style="font-style:italic;color:green;">Select residues by number  </span> </tr></td>
+<tr><td> select selection_name, resi 1+3+7+8+9 or resi 1-9 </tr></td>
+<tr><td> <span style="font-style:italic;color:green;">Pymol Command line references </span> </tr></td>
+<tr><td> https://pymol.org/pymol-command-ref.html </tr></td>
+<tr><td> <span style="font-style:italic;color:green;">Calculate Center of mass (center_of_mass.py) </span> </tr></td>
+<tr><td> com selection </tr></td>
+<tr><td> <span style="font-style:italic;color:green;">Highlight interacting residues between two chains </span> </tr></td>
+<tr><td> interfaceResidues 1h4g </tr></td>
+<tr><td> <span style="font-style:italic;color:green;">Pymol Scripts library </span> </tr></td>
+<tr><td> https://pymolwiki.org/index.php/Category:Script_Library </tr></td>
+<tr><td> <span style="font-style:italic;color:green;">Calculate Angle between two helices in PDB structure (helix_angle.py) </span> </tr></td>
+<tr><td> helix_angle 1a6m &amp; i. 4-19, 1a6m &amp; i. 21-35, object_name=ax, radius=.5, color=blue </tr></td>
+<tr><td> <span style="font-style:italic;color:green;">Find Sequence in PDB structure (findseq.py) </span> </tr></td>
+<tr><td> findseq FATEW, 1tvn </tr></td>
+<tr><td> <span style="font-style:italic;color:green;">Export high quality image </span> </tr></td>
+<tr><td> png ~/Desktop/test.png, width=10cm, dpi=300, ray=1 </tr></td>
+<tr><td> <span style="font-style:italic;color:green;">split models in NMR structures </span> </tr></td>
+<tr><td> split_states name </tr></td>
+
+	</table>
+</body>
+</html>

@@ -1,0 +1,231 @@
+@font-face {
+	font-family: 'OpenSans';
+	src: url('../fonts/OpenSans-Regular.eot');
+	src: local('☺'), url('../fonts/OpenSans-Regular.woff') format('woff'), url('../fonts/OpenSans-Regular.ttf') format('truetype'), url('../fonts/OpenSans-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Play';
+	src: url('../fonts/Play-Regular.eot');
+	src: local('☺'), url('../fonts/Play-Regular.woff') format('woff'), url('../fonts/Play-Regular.ttf') format('truetype'), url('../fonts/Play-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+body {
+	background-color: #fff;
+	font-family: 'OpenSans';
+	margin: 0;
+}
+img {
+	border: 0;
+}
+/*------------------------------ HEADER ------------------------------*/
+#header {
+	background-color: #1d8350;
+	border-bottom: 2px solid #e6e6e6;
+	padding: 30px 0;
+	margin: 0 -85px 0 0;
+}
+#header > div, #footer > div {
+	width: 930px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+/** Logo **/
+#header .logo {
+	float: left;
+	margin-right: 20px;
+}
+#header .logo a {
+	background: url(../images/example.svg) no-repeat center top;
+	color: #000;
+	display: block;
+	font: 12px/30px 'play';
+	text-align: center;
+	height: 5px;
+	width: 200px;
+	padding-top: 48px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+/** Navigation **/
+#navigation {
+	display: inline-block;
+	list-style: none;
+	line-height: 60px;
+	margin: 0;
+	padding: 0;
+}
+#navigation ul {
+	display: inline-block;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#navigation li {
+	float: left;
+	width: 100px;
+	text-align: center;
+}
+#navigation li a {
+	color: #000;
+	font-size: 15px;
+	line-height: 60px;
+	text-decoration: none;
+}
+#navigation li.active a {
+	color: #6cdad2;
+}
+#adbox {
+	background: url(../images/bg-adbox.jpg) repeat-x left top;
+	height: 380px;
+	padding: 60px 0;
+}
+#adbox > div {
+	width: 800px;
+	margin: 0 auto;
+	padding: 0 80px;
+}
+#adbox > div img {
+	float: right;
+	margin-left: 60px;
+}
+#adbox h1, #adbox h2 {
+	color: #2c2c2c;
+	font-size: 60px;
+	line-height: 60px;
+	margin: 0;
+	text-transform: uppercase;
+}
+#adbox h2 {
+	font-size: 30px;
+	line-height: 36px;
+	text-transform: none;
+}
+#adbox p {
+	font-size: 16px;
+	line-height: 24px;
+	margin: 0;
+}
+#adbox p span {
+	display: block;
+	font-size: 12px;
+	width: 360px;
+	padding: 24px 0;
+	text-align: center;
+}
+#adbox p span b {
+	font-weight: normal;
+	display: block;
+	width: 256px;
+}
+/* The sidebar menu */
+.sidenav {
+  height: 512px; /* Full-height: remove this if you want "auto" height */
+  width: 160px; /* Set the width of the sidebar */
+  position: absolute; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 127px;/* Stay at the top */
+  left: 0;
+  /*background-color: #111; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+/*  background-image: linear-gradient(#4e7a85, #1095a5);*/
+  background-image: linear-gradient(#1d8350, #eaf5f6);
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 6px 8px 6px 26px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #020000;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+  background-color: #020000;
+}
+/*.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+/*  font-size: 15px; /* Increased text to enable scrolling */
+/*  padding: 30px 10px;
+/*}*/
+
+/*@media screen and (max-height: 450px) {
+/*  .sidenav {padding-top: 15px;}
+/*  .sidenav a {font-size: 18px;}
+/*}*/
+#contents {
+
+    min-height: 510px;
+    margin-left: 200px;
+    width: 880px;
+    padding: 0px 40px;
+
+}
+.main {
+
+    float: left;
+    background: url(../images/divider.png) repeat-y right top;
+    height: 350px;
+    width: 701px;
+    padding-right: 24px;
+    border-style: dashed;
+    border-width: 1px;
+    border-color: #5e909b;
+    overflow: scroll;
+}
+
+.main h1, .sidebar h1 {
+
+    margin: 0 0 12px;
+    position: relative;
+    top: -18px;
+	color: #3e3e3e;
+	font-size: 30px;
+	font-weight: normal;
+	line-height: 30px;
+}
+
+.news {
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+.news li {
+
+    border-top: 1px solid #d5d5d5;
+    padding: 24px 30px 0 100px;
+    position: relative;
+    list-style: none;
+}
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 10px 0 10px 20px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+ 
